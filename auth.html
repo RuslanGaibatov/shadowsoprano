@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Авторизация | Shadow Soprano</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="auth-container">
+      <h2>Вход в Shadow Soprano</h2>
+      <p>
+        Добро пожаловать! Войдите, чтобы читать новые главы и поддерживать
+        команду.
+      </p>
+
+      <button class="google-auth">
+        <img src="google-icon.png" alt="Google" /> Войти через Google
+      </button>
+
+      <hr />
+
+      <form action="login.php" method="POST">
+        <label for="email">Email или номер телефона</label>
+        <input type="text" id="email" name="email" required />
+
+        <label for="password">Пароль</label>
+        <input type="password" id="password" name="password" required />
+
+        <button type="submit">Войти</button>
+      </form>
+
+      <p class="register-link">
+        Нет аккаунта? <a href="register.html">Зарегистрироваться</a>
+      </p>
+    </div>
+
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
+      import {
+        getAuth,
+        signInWithPopup,
+        GoogleAuthProvider,
+      } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-auth.js";
+
+      const firebaseConfig = {
+        apiKey: "AIzaSyBhm0LqP-8zQznP8xLw2TuTpfv4Qw4nbGw",
+        authDomain: "shadow-soprano.firebaseapp.com",
+        projectId: "shadow-soprano",
+        storageBucket: "shadow-soprano.appspot.com",
+        messagingSenderId: "97822264572",
+        appId: "1:97822264572:web:b0bf3c960bbee27ec6db79",
+        measurementId: "G-BBWJ2VM4H7",
+      };
+
+      const app = initializeApp(firebaseConfig);
+      const auth = getAuth(app);
+      const provider = new GoogleAuthProvider();
+
+      document.querySelector(".google-auth").addEventListener("click", () => {
+        signInWithPopup(auth, provider)
+          .then((result) => {
+            console.log("Успешный вход:", result.user);
+            alert("Вы вошли как " + result.user.displayName);
+            window.location.href = "index.html";
+          })
+          .catch((error) => {
+            console.error("Ошибка авторизации:", error);
+            alert("Ошибка: " + error.message);
+          });
+      });
+    </script>
+    <script type="module" src="firebase-init.js"></script>
+  </body>
+</html>

@@ -1,0 +1,251 @@
+/* Подключение шрифтов */
+@import url("https://fonts.googleapis.com/css2?family=Atma:wght@300;400;700&family=Tektur:wght@400;700&display=swap");
+
+/* Общие стили */
+body {
+  font-family: "Atma", sans-serif;
+  background-color: #0a0e15;
+  color: #e0e4eb;
+  margin: 0;
+  padding: 0;
+}
+
+/* Навигационная панель */
+nav {
+  background-color: #1b1f2a;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  font-family: "Tektur", sans-serif;
+  text-decoration: none;
+  color: #f5a623;
+  font-weight: 700;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #e59400;
+}
+
+nav ul li input {
+  padding: 7px;
+  border-radius: 5px;
+  border: none;
+  background-color: #2d3343;
+  color: #e0e4eb;
+}
+
+/* Кнопка авторизации */
+.auth-container {
+  margin-left: auto;
+}
+
+.auth-button {
+  background-color: #f5a623;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: "Tektur", sans-serif;
+  transition: background 0.3s ease;
+}
+
+.auth-button:hover {
+  background-color: #e59400;
+}
+
+/* Главный блок */
+header {
+  text-align: center;
+  padding: 60px;
+  background: linear-gradient(to right, #2d3343, #1b1f2a);
+  color: #ffffff;
+  font-family: "Tektur", sans-serif;
+}
+
+header h1 {
+  font-size: 2.5em;
+}
+
+header p {
+  font-size: 1.2em;
+}
+
+/* Разделы */
+section {
+  padding: 30px;
+}
+
+h2 {
+  font-family: "Tektur", sans-serif;
+  color: #f5a623;
+  font-size: 2em;
+}
+
+/* Карточки глав */
+.chapter-card {
+  border: 1px solid #4e576a;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: #2d3343;
+  text-align: center;
+  margin: 20px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.chapter-card img {
+  width: 120px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.chapter-card h3 {
+  font-family: "Tektur", sans-serif;
+  color: #f5a623;
+}
+
+.chapter-card p {
+  font-size: 1em;
+}
+
+/* Кнопки */
+button {
+  background-color: #f5a623;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: "Tektur", sans-serif;
+  font-size: 1em;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #e59400;
+}
+
+/* Отзывы */
+.testimonials blockquote {
+  border-left: 4px solid #f5a623;
+  padding-left: 15px;
+  font-style: italic;
+  margin: 20px 0;
+}
+
+.testimonials footer {
+  text-align: right;
+  font-weight: bold;
+  font-family: "Tektur", sans-serif;
+}
+
+/* Подвал */
+footer {
+  background-color: #1b1f2a;
+  text-align: center;
+  padding: 15px;
+  color: #e0e4eb;
+  font-size: 0.9em;
+}
+
+/* Стили для страницы авторизации */
+.auth-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #0a0e15;
+}
+
+.auth-container {
+  max-width: 400px;
+  padding: 20px;
+  background: #1b1f2a;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.auth-container h2 {
+  color: #f5a623;
+  font-family: "Tektur", sans-serif;
+}
+
+.auth-container p {
+  color: #e0e4eb;
+}
+
+.google-auth {
+  background-color: #ffffff;
+  color: #1b1f2a;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  border-radius: 5px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.google-auth img {
+  width: 20px;
+  margin-right: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  text-align: left;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #f5a623;
+}
+
+form input {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #2d3343;
+  color: #e0e4eb;
+  margin-top: 5px;
+}
+
+form button {
+  margin-top: 15px;
+  width: 100%;
+}
+
+.register-link {
+  margin-top: 10px;
+}
+
+.register-link a {
+  color: #f5a623;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.register-link a:hover {
+  color: #e59400;
+}
