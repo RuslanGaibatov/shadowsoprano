@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,114 +7,93 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <!-- навигация -->
-    <nav>
-      <ul>
-        <li><a href="index.html">главная</a></li>
-        <li><a href="about.html">о нас</a></li>
-        <li><a href="chapters.html">главы</a></li>
-        <li><a href="donations.html">донаты</a></li>
-      </ul>
-    </nav>
-
-    <!-- секция глав -->
+    <!-- Контент страницы (без навбара) -->
     <section>
-      <h2>главы манги</h2>
+      <h2>Главы манги</h2>
       <p>
-        здесь вы найдете наши работы — главы "блю лока", которые мы перевели и
-        заколорили. каждая страница — результат часов труда нашей команды.
+        Здесь вы найдете наши работы — главы "Блю Лока", которые мы перевели и
+        заколорили.
       </p>
 
-      <!-- карточка главы -->
+      <!-- Карточка "Блю Лок" -->
       <div class="chapter-card">
-        <h3>блю лок</h3>
-        <img src="Рин.jpg" alt="блю лок - глава 286" />
-        <p>
-          легендарная манга о футбольных битвах и личных амбициях. погрузитесь в
-          невероятный мир, где каждый шаг — борьба за звание лучшего.
-        </p>
-        <a
-          href="https://telegra.ph/286-glava-Blyu-Loka-12-11"
-          class="read-button"
-          >читать главу 286</a
-        >
+        <h3>Блю Лок</h3>
+        <img src="Рин.jpg" alt="Блю Лок - глава 286" />
+        <p>Легендарная манга о футбольных битвах и личных амбициях.</p>
+        <a href="#chapters-list" class="read-button">Выбрать главу</a>
       </div>
     </section>
 
+    <!-- Выбор главы -->
+    <section id="chapters-list">
+      <h3>Выберите главу:</h3>
+      <a href="chapter_286.html" class="chapter-link">286</a>
+      <a href="chapter_287.html" class="chapter-link">287</a>
+      <a href="chapter_288.html" class="chapter-link">288</a>
+      <a href="chapter_289.html" class="chapter-link">289</a>
+    </section>
+
     <footer>
-      <p>© shadow soprano 2024. все права защищены.</p>
+      <p>© Shadow Soprano 2024. Все права защищены.</p>
     </footer>
 
     <style>
-      /* общий стиль */
       body {
         font-family: Arial, sans-serif;
         margin: 0;
         padding: 0;
-      }
-
-      nav ul {
-        list-style: none;
-        background-color: #333;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        justify-content: space-around;
-      }
-
-      nav ul li a {
-        color: rgb(251, 255, 0);
-        text-decoration: none;
-        padding: 15px;
-        display: block;
-      }
-
-      nav ul li a:hover {
-        background-color: #0006b4;
+        background-color: #121212;
+        color: #f5f5f5;
       }
 
       section {
         padding: 20px;
+        text-align: center;
       }
 
       .chapter-card {
-        border: 1px solid #d71c1c;
-        border-radius: 8px;
+        background-color: #252525;
+        border-radius: 10px;
         padding: 15px;
-        margin: 15px 0;
-        text-align: left;
-        background-color: #0fea75;
         max-width: 300px;
+        margin: 0 auto;
       }
 
       .chapter-card img {
         width: 100%;
         border-radius: 5px;
-        margin-bottom: 10px;
-      }
-
-      .chapter-card h3 {
-        margin: 10px 0;
-      }
-
-      .chapter-card p {
-        margin: 10px 0;
-        color: #000000;
       }
 
       .read-button {
-        display: inline-block;
-        padding: 10px 20px;
-        margin-top: 10px;
+        display: block;
         background-color: #007bff;
-        color: rgb(139, 207, 13);
+        color: white;
+        padding: 10px;
+        margin-top: 10px;
         text-decoration: none;
         border-radius: 5px;
-        transition: background-color 0.3s;
       }
 
       .read-button:hover {
         background-color: #0056b3;
+      }
+
+      #chapters-list {
+        margin-top: 20px;
+      }
+
+      .chapter-link {
+        display: inline-block;
+        color: #00d4ff;
+        text-decoration: none;
+        padding: 10px;
+        margin: 5px;
+        background-color: #252525;
+        border-radius: 5px;
+      }
+
+      .chapter-link:hover {
+        background-color: #00aacc;
       }
     </style>
   </body>
