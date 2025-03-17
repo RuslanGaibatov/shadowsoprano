@@ -1,4 +1,4 @@
-<section>
+<section> 
     <h2>Отзывы пользователей</h2>
     <div class="testimonials">
         <blockquote>
@@ -14,4 +14,77 @@
             <footer>— @Anzu99</footer>
         </blockquote>
     </div>
+    
+    <h3>Оставьте свой отзыв</h3>
+    <form id="review-form">
+        <label for="nickname">Псевдоним:</label>
+        <input type="text" id="nickname" required>
+        
+        <label for="rating">Оценка:</label>
+        <select id="rating" required>
+            <option value="1">1 звезда</option>
+            <option value="2">2 звезды</option>
+            <option value="3">3 звезды</option>
+            <option value="4">4 звезды</option>
+            <option value="5">5 звезд</option>
+        </select>
+        
+        <label for="comment">Комментарий:</label>
+        <textarea id="comment" required></textarea>
+        
+        <button type="submit">Отправить</button>
+    </form>
+    
+    <h3>Общий рейтинг</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Рейтинг</th>
+                <th>Количество отзывов</th>
+            </tr>
+        </thead>
+        <tbody id="rating-table">
+            <tr>
+                <td>5 звезд</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>4 звезды</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>3 звезды</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>2 звезды</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>1 звезда</td>
+                <td>0</td>
+            </tr>
+        </tbody>
+    </table>
 </section>
+
+<script>
+    document.getElementById('review-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        let nickname = document.getElementById('nickname').value;
+        let rating = document.getElementById('rating').value;
+        let comment = document.getElementById('comment').value;
+        
+        let reviewBlock = document.createElement('blockquote');
+        reviewBlock.innerHTML = `<p>"${comment}"</p><footer>— @${nickname}</footer>`;
+        document.querySelector('.testimonials').appendChild(reviewBlock);
+        
+        let rows = document.querySelectorAll('#rating-table tr');
+        let ratingIndex = 5 - rating;
+        let countCell = rows[ratingIndex].children[1];
+        countCell.textContent = parseInt(countCell.textContent) + 1;
+        
+        document.getElementById('review-form').reset();
+    });
+</script>
