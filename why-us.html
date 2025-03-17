@@ -1,17 +1,110 @@
-<section>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Почему Shadow Soprano?</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Atma:wght@300;400;700&family=Tektur:wght@400;700&display=swap");
+
+        body {
+            font-family: "Atma", sans-serif;
+            background-color: #0a0e15;
+            color: #e0e4eb;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        h2 {
+            font-family: "Tektur", sans-serif;
+            color: #f5a623;
+            font-size: 2.5em;
+            margin-top: 40px;
+        }
+
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .feature {
+            background: #1b1f2a;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 300px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .feature:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        h3 {
+            font-family: "Tektur", sans-serif;
+            color: #f5a623;
+        }
+
+        p {
+            font-size: 1em;
+        }
+
+        .social-links {
+            margin-top: 30px;
+        }
+
+        .social-links a {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 15px;
+            color: white;
+            background: #f5a623;
+            border-radius: 5px;
+            text-decoration: none;
+            font-family: "Tektur", sans-serif;
+            transition: background 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: #e59400;
+        }
+
+        @media (max-width: 600px) {
+            .features {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
     <h2>Почему Shadow Soprano?</h2>
+    
     <div class="features">
         <div class="feature">
             <h3>Качество прежде всего</h3>
-            <p>Мы создаем переводы с вниманием к деталям: четкая редактура, выверенные формулировки и мастерский клин.</p>
+            <p>Мы не просто переводим — мы создаем. Четкая редактура, грамотный перевод и мастерский клин делают каждую главу лучше.</p>
         </div>
         <div class="feature">
-            <h3>Настоящие энтузиасты</h3>
-            <p>Наша команда – это люди, объединенные любовью к "Блю Локу" и желанием делиться им с миром.</p>
+            <h3>Команда энтузиастов</h3>
+            <p>Мы любим "Блю Лок" и кайфуем от процесса. Это не работа, а стиль жизни.</p>
         </div>
         <div class="feature">
-            <h3>Комьюнити и поддержка</h3>
-            <p>Станьте частью нашего сообщества, участвуйте в обсуждениях и помогайте проекту развиваться!</p>
+            <h3>Мы — сообщество</h3>
+            <p>Поддержка, общение, идеи. Вместе мы двигаем проект вперед. Присоединяйся!</p>
         </div>
     </div>
-</section>
+
+    <div class="social-links">
+        <a href="https://t.me/shadow_soprano" target="_blank">Наш Telegram</a>
+        <a href="https://vk.com/shadow_soprano" target="_blank">Наш VK</a>
+    </div>
+
+</body>
+</html>
